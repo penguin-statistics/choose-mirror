@@ -1,3 +1,12 @@
 {
-  "message": "hello i18n !!"
+  "mirrors": {
+    "global": {
+      "title": "全球站",
+      "subtitle": "国外用户请使用全球站"
+    },
+    "cn": {
+      "title": "中国站",
+      "subtitle": "国内用户请使用中国站"
+    }
+  }
 }

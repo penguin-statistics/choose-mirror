@@ -31,7 +31,7 @@
             cols="12"
             sm="6"
           >
-            <v-card hover @click="go(mirror.url)">
+            <v-card hover :href="mirror.url">
               <v-img
                 class="white--text align-center text-center"
                 :height="picHeight"
@@ -87,7 +87,7 @@ export default {
         icon: {
           tld: ".cn"
         },
-        url: "https://penguin-stats.cn",
+        url: "https://penguin-stats.cn/?utm_source=choose-mirror",
         new: true
       },
       {
@@ -95,16 +95,11 @@ export default {
         icon: {
           tld: ".io"
         },
-        url: "https://penguin-stats.io",
+        url: "https://penguin-stats.io/?utm_source=choose-mirror",
       }
     ]
   }),
 
-  methods: {
-    go (url) {
-      document.location = url;
-    }
-  },
   computed: {
     year() {
       return new Date().getFullYear();

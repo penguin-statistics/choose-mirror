@@ -4,15 +4,51 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta name="description" content="Choose one of the several mirrors for Penguin Statistics, a drop data collector for game ArkNights."/>
+    <meta name="robots" content="noindex,follow" />
+
     <link rel="icon" href="https://penguin.upyun.galvincdn.com/logos/penguin_stats_logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <title>Choose A Mirror | Penguin Statistics</title>
+
+    <style>
+      ._loading {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999999999;
+        font-size: 48px;
+        text-align: center;
+        color: #aaa;
+        font-family: "Roboto Mono", "Roboto", sans-serif;
+        margin-top: 30vh;
+      }
+    </style>
   </head>
-  <body>
+  <body style="background: #121212;">
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <h1>
+        No Script :(
+      </h1>
+      Although just choosing a mirror doesn't need some fancy JS, we actually do still build this page upon Vue.js. You could, however, see the mirror listed below, but the actual Penguin Statistics DO need you to have JavaScript enabled. Sorry about the inconvenience.
+      <ul>
+        <li>
+          CN site - <a href="https://penguin-stats.cn/?utm_source=choose-mirror&utm_medium=noscript">https://penguin-stats.cn</a>
+        </li>
+        <li>
+          Global site - <a href="https://penguin-stats.io/?utm_source=choose-mirror&utm_medium=noscript">https://penguin-stats.io</a>
+        </li>
+      </ul>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div class="_loading">
+        loading
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

@@ -3,6 +3,10 @@
     <v-content>
       <v-container>
         <v-row align="start" justify="center">
+          <div class="locale-switcher">
+            <LocaleSwitcher />
+          </div>
+
           <v-col cols="12">
             <v-img
               position="center center"
@@ -14,14 +18,14 @@
             />
 
             <h2 class="overline font-weight-bold text-center">
-              企鹅物流数据统计
+              {{ $t('app.name') }}
             </h2>
             <h1 class="heading text-center">
-              镜像站选择
+              {{ $t('app.title') }}
             </h1>
 
-            <v-alert border="left" type="info" color="blue lighten-2" class="my-3" outlined>
-              所有镜像站内的内容是一样的：不同服务器的数据内容，和所进入的镜像站是什么无关
+            <v-alert border="left" type="info" color="blue lighten-2" class="mt-4 mb-2" outlined>
+              {{ $t('app.notice') }}
             </v-alert>
           </v-col>
 
@@ -39,10 +43,10 @@
                 gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
               >
                 <span
-                  style="font-size: 64px"
+                  style="font-size: 48px"
                   class="white--text monospace"
                 >
-                  {{ mirror.icon.tld }}
+                  <span class="normal">{{mirror.icon.domain}}</span><span class="emphasize">.{{ mirror.icon.tld }}</span>
                 </span>
               </v-img>
               <v-divider/>
@@ -77,28 +81,42 @@
 
 <script>
 
+import strings from "./utils/strings";
+import I18n from "./mixins/I18n";
+import LocaleSwitcher from "./components/LocaleSwitcher";
+
 export default {
   name: 'App',
+  components: {LocaleSwitcher},
+  mixins: [I18n],
 
   data: () => ({
     mirrors: [
       {
         id: "cn",
         icon: {
-          tld: ".cn"
+          domain: "penguin-stats",
+          tld: "cn"
         },
-        url: "https://penguin-stats.cn/?utm_source=choose-mirror",
+        url: "https://penguin-stats.cn/?utm_source=choose-mirror&utm_medium=card-option",
         new: true
       },
       {
         id: "global",
         icon: {
-          tld: ".io"
+          domain: "penguin-stats",
+          tld: "io"
         },
-        url: "https://penguin-stats.io/?utm_source=choose-mirror",
+        url: "https://penguin-stats.io/?utm_source=choose-mirror&utm_medium=card-option",
       }
     ]
   }),
+
+  created () {
+    const language = strings.getFirstBrowserLanguage();
+    console.info("i18n", "detected language", language);
+    if (language) this.changeLocale(language)
+  },
 
   computed: {
     year() {
@@ -115,7 +133,22 @@ export default {
   .monospace {
     font-family: "Roboto Mono", "Fira Code", "Roboto", sans-serif;
     font-weight: 500;
+  }
+  .monospace .normal {
+    font-size: 20px
+  }
+  .monospace .emphasize{
     letter-spacing: -.15rem;
     text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  }
+  .monospace .wide {
+    letter-spacing: 0 !important;
+  }
+
+  .locale-switcher {
+    position: fixed !important;
+    right: 1em !important;
+    top: 1em !important;
+    z-index: 99999999;
   }
 </style>

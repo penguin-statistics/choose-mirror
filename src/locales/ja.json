@@ -1,11 +1,11 @@
 {
   "app": {
-    "name": "Penguin Statistics",
+    "name": "ペンギン急便データ統計処理部門",
     "title": "Choose A Mirror",
     "notice": "The contents in different mirror sites are identical. The data source server is having no correlation regards to what mirror site you visit."
   },
   "menu": {
-    "languages": "Language"
+    "languages": "言語切替"
   },
   "mirrors": {
     "global": {

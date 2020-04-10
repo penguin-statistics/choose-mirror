@@ -163,7 +163,7 @@ export default {
   }
 
   .theme--dark.v-sheet {
-    background: rgba(25, 25, 25, .7) !important;
+    background: rgba(20, 20, 20, .8) !important;
   }
 
   .theme--dark.v-sheet.v-alert {

@@ -36,7 +36,7 @@
             cols="12"
             sm="6"
           >
-            <v-card hover :href="mirror.url">
+            <v-card hover :href="mirror.url" class="card-background">
               <v-img
                 class="white--text align-center text-center"
                 :height="picHeight"
@@ -70,7 +70,7 @@
       </v-container>
     </v-content>
 
-    <v-footer color="transparent"  class="white--text text-center">
+    <v-footer color="transparent" class="white--text text-center">
       <v-card-text class="white--text">
         <strong>Penguin Statistics</strong>
         —
@@ -162,7 +162,7 @@ export default {
     background: transparent !important;
   }
 
-  .theme--dark.v-sheet {
+  .card-background {
     background: rgba(20, 20, 20, .8) !important;
   }
 

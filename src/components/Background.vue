@@ -4,7 +4,7 @@
     height="100vh"
     width="100vw"
     class="background"
-    gradient="to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 100%"
+    gradient="to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 100%"
 
     transition="fade-transition"
   />

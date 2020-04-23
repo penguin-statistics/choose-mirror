@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "펭귄 물류 데이터 분석 부서",
+    "title": "Choose A Mirror",
+    "notice": "The contents in different mirror sites are identical. The data source server is having no correlation regards to what mirror site you visit."
+  },
+  "menu": {
+    "languages": "언어 변경"
+  },
+  "mirrors": {
+    "global": {
+      "title": "Global Site",
+      "subtitle": "If you are not in China, please use this mirror."
+    },
+    "cn": {
+      "title": "CN Site",
+      "subtitle": "If you are in China, please use this mirror."
+    }
+  }
+}

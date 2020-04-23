@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "Penguin Statistics",
+    "title": "Choose A Mirror",
+    "notice": "The contents in different mirror sites are identical. The data source server is having no correlation regards to what mirror site you visit."
+  },
+  "menu": {
+    "languages": "Language"
+  },
+  "mirrors": {
+    "global": {
+      "title": "Global Site",
+      "subtitle": "If you are not in China, please use this mirror."
+    },
+    "cn": {
+      "title": "CN Site",
+      "subtitle": "If you are in China, please use this mirror."
+    }
+  }
+}
